@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="cleanlungs" target="1.5" />
+      <module name="cleanlungs" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

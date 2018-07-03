@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en"
       xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:h="http://java.sun.com/jsf/html">
 <h:head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <title>Cleanlungs</title>
+    <title>Persons</title>
 </h:head>
 <h:body>
-    <p>Hello World! from xhtml</p>
+    <p>Persons</p>
+    <ul>
+        <ui:repeat value="#{personController.persons}" var="per">
+            <li>#{per.personId} - #{per.firstName} #{per.lastName} #{per.street} #{per.buildingNumber} #{per.phoneNumber} #{per.email} #{per.phoneNumber} #{per.pesel} #{per.registrationDate}</li>
+            <!--<li>#{per.personId} - #{per.firstName} #{per.lastName}</li>-->
+        </ui:repeat>
+    </ul>
 </h:body>
 </html>
