@@ -1,19 +1,71 @@
 <!DOCTYPE html>
 <html lang="en"
       xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:h="http://java.sun.com/jsf/html">
 <h:head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>Persons</title>
+    <link rel="stylesheet" type="text/css" href="application.css"/>
 </h:head>
 <h:body>
     <p>Persons</p>
+    <h:form>
+        <h:panelGrid columns="9">
+            <h:outputLabel for="registeredAfter" value="Registred After:"/>
+            <h:inputText id="registeredAfter" value="#{searchForm.registeredAfter}"
+                         converterMessage="Please enter a valid date. For example 15/4/2015.">
+                <f:convertDateTime pattern="dd/MM/yyyy"/>
+            </h:inputText>
+            <h:message for="registeredAfter"/>
+            <h:commandButton value="Submit"/>
+        </h:panelGrid>
+    </h:form>
+
     <ul>
-        <ui:repeat value="#{personController.persons}" var="per">
-            <li>#{per.personId} - #{per.firstName} #{per.lastName} #{per.street} #{per.buildingNumber} #{per.phoneNumber} #{per.email} #{per.phoneNumber} #{per.pesel} #{per.registrationDate}</li>
-            <!--<li>#{per.personId} - #{per.firstName} #{per.lastName}</li>-->
-        </ui:repeat>
+        <h:dataTable value="#{personController.persons}" var="per" styleClass="person-table">
+            <h:column>
+                <f:facet name="header">User ID</f:facet>
+                <h:link value="#{per.personId}" outcome="person">
+                    <f:param name="perid" value="#{per.personId}"/>
+                </h:link>
+            </h:column>
+            <h:column>
+                <f:facet name="header">First name</f:facet>
+                #{per.firstName}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Last name</f:facet>
+                #{per.lastName}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Street</f:facet>
+                #{per.street}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Building number</f:facet>
+                #{per.buildingNumber}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Email</f:facet>
+                #{per.email}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Phone</f:facet>
+                #{per.phoneNumber}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Pesel</f:facet>
+                #{per.pesel}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Registered</f:facet>
+                <h:outputText value="#{per.registrationDate}">
+                    <f:convertDateTime pattern="dd/MM/yyyy"/>
+                </h:outputText>
+            </h:column>
+        </h:dataTable>
     </ul>
 </h:body>
 </html>
