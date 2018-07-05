@@ -1,29 +1,23 @@
-<!DOCTYPE html>
-<html lang="en"
-      xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:h="http://java.sun.com/jsf/html">
-<h:head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <title>Persons</title>
-    <link rel="stylesheet" type="text/css" href="application.css"/>
-</h:head>
-<h:body>
-    <p>Persons</p>
-    <h:form>
-        <h:panelGrid columns="9">
-            <h:outputLabel for="registeredAfter" value="Registred After:"/>
-            <h:inputText id="registeredAfter" value="#{searchForm.registeredAfter}"
-                         converterMessage="Please enter a valid date. For example 15/4/2015.">
-                <f:convertDateTime pattern="dd/MM/yyyy"/>
-            </h:inputText>
-            <h:message for="registeredAfter"/>
-            <h:commandButton value="Submit"/>
-        </h:panelGrid>
-    </h:form>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                template="template.xhtml">
+    <ui:param name="pageTitle" value="Persons"/>
+    <ui:define name="content">
+        <p>Persons</p>
+        <h:form>
+            <h:panelGrid columns="9">
+                <h:outputLabel for="registeredAfter" value="Registred After:"/>
+                <h:inputText id="registeredAfter" value="#{searchForm.registeredAfter}"
+                             converterMessage="Please enter a valid date. For example 15/4/2015.">
+                    <f:convertDateTime pattern="dd/MM/yyyy"/>
+                </h:inputText>
+                <h:message for="registeredAfter"/>
+                <h:commandButton value="Submit"/>
+            </h:panelGrid>
+        </h:form>
 
-    <ul>
         <h:dataTable value="#{personController.persons}" var="per" styleClass="person-table">
             <h:column>
                 <f:facet name="header">User ID</f:facet>
@@ -66,6 +60,5 @@
                 </h:outputText>
             </h:column>
         </h:dataTable>
-    </ul>
-</h:body>
-</html>
+    </ui:define>
+</ui:composition>
