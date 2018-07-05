@@ -1,5 +1,7 @@
 package com.cleanlungs.ui;
 
+import com.cleanlungs.Person;
+
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
 
@@ -8,6 +10,7 @@ import javax.inject.Named;
 public class PersonForm {
 
     private Integer personId;
+    private Person person;
 
     public Integer getPersonId() {
         return personId;
@@ -15,5 +18,13 @@ public class PersonForm {
 
     public void setPersonId(final Integer personId) {
         this.personId = personId;
+    }
+
+    public Person getPerson() {
+        return person;
+    }
+
+    public void setPerson(final Person person) {
+        this.person = person;
     }
 }

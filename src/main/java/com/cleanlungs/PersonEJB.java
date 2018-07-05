@@ -25,4 +25,21 @@ public class PersonEJB {
                 .createQuery("select e from Person e", Person.class);
         return query.getResultList();
     }
+
+    public Person find(Integer id) {
+        return entityManager.find(Person.class, id);
+    }
+
+    public Person merge(Person person) {
+        return entityManager.merge(person);
+    }
+
+    public void persist(Person person) {
+        entityManager.persist(person);
+    }
+
+    public void remove(Person person) {
+        Person attached = find(person.getPersonId());
+        entityManager.remove(attached);
+    }
 }

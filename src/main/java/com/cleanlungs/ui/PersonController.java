@@ -19,9 +19,6 @@ import java.util.List;
 @Named
 public class PersonController {
 
-    @PersistenceContext
-    EntityManager entityManager;
-
     @Inject
     private SearchForm searchForm;
 
@@ -36,5 +33,9 @@ public class PersonController {
         } else {
             return personEJB.queryRegisteredAfter(searchForm.getRegisteredAfter());
         }
+    }
+
+    public void remove(Person person) {
+        personEJB.remove(person);
     }
 }

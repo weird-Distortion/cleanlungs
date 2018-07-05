@@ -5,19 +5,19 @@
               xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd">
 
     <!-- Employee Edit Page -->
-    <!--<navigation-rule>-->
-        <!--<from-view-id>/employee.xhtml</from-view-id>-->
-        <!--<navigation-case>-->
-            <!--<from-action>#{editEmployeeController.save}</from-action>-->
-            <!--<if>#{not facesContext.isValidationFailed()}</if>-->
-            <!--<to-view-id>/index.xhtml</to-view-id>-->
-            <!--<redirect/>-->
-        <!--</navigation-case>-->
-        <!--<navigation-case>-->
-            <!--<from-outcome>cancel</from-outcome>-->
-            <!--<to-view-id>/index.xhtml</to-view-id>-->
-            <!--<redirect/>-->
-        <!--</navigation-case>-->
-    <!--</navigation-rule>-->
+    <navigation-rule>
+        <from-view-id>/person.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{personEditorController.save}</from-action>
+            <if>#{not facesContext.isValidationFailed()}</if>
+            <to-view-id>/index.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>cancel</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
 
 </faces-config>

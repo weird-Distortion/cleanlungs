@@ -6,11 +6,31 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52f65ef0-ab5d-48cf-a075-f1001192dd3f" name="Default" comment="Merge branch 'master' of github.com:weird-Distortion/cleanlungs&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/cleanlungs/ui/PersonController.java&#10;#&#9;src/main/webapp/index.xhtml&#10;#&#9;target/cleanlungs-1.0-SNAPSHOT-exploded.war/index.xhtml&#10;#&#9;target/cleanlungs-1.0-SNAPSHOT.war">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/template.xhtml" afterDir="false" />
+    <list default="true" id="52f65ef0-ab5d-48cf-a075-f1001192dd3f" name="Default" comment="Cleaned xhtml files, added template">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cleanlungs/ui/PersonEditorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/cleanlungs/ui/PersonEditorController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/cleanlungs-1.0-SNAPSHOT-exploded.war/WEB-INF/classes/com/cleanlungs/ui/PersonEditorController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/cleanlungs-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cleanlungs/PersonEJB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cleanlungs/PersonEJB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cleanlungs/ui/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cleanlungs/ui/PersonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cleanlungs/ui/PersonForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cleanlungs/ui/PersonForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/person.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/person.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cleanlungs/PersonEJB.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cleanlungs/PersonEJB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cleanlungs/ui/PersonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cleanlungs/ui/PersonController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cleanlungs/ui/PersonForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cleanlungs/ui/PersonForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cleanlungs-1.0-SNAPSHOT-exploded.war/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cleanlungs-1.0-SNAPSHOT-exploded.war/WEB-INF/classes/com/cleanlungs/PersonEJB.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cleanlungs-1.0-SNAPSHOT-exploded.war/WEB-INF/classes/com/cleanlungs/PersonEJB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cleanlungs-1.0-SNAPSHOT-exploded.war/WEB-INF/classes/com/cleanlungs/ui/PersonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cleanlungs-1.0-SNAPSHOT-exploded.war/WEB-INF/classes/com/cleanlungs/ui/PersonController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cleanlungs-1.0-SNAPSHOT-exploded.war/WEB-INF/classes/com/cleanlungs/ui/PersonForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cleanlungs-1.0-SNAPSHOT-exploded.war/WEB-INF/classes/com/cleanlungs/ui/PersonForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cleanlungs-1.0-SNAPSHOT-exploded.war/WEB-INF/faces-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/cleanlungs-1.0-SNAPSHOT-exploded.war/WEB-INF/faces-config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/cleanlungs-1.0-SNAPSHOT-exploded.war/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/cleanlungs-1.0-SNAPSHOT-exploded.war/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cleanlungs-1.0-SNAPSHOT.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cleanlungs-1.0-SNAPSHOT-exploded.war/person.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/cleanlungs-1.0-SNAPSHOT-exploded.war/person.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,6 +56,99 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Person.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cleanlungs/Person.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PersonEJB.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cleanlungs/PersonEJB.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#894#895#0" expanded="true" />
+                <element signature="e#953#954#0" expanded="true" />
+                <element signature="e#995#996#0" expanded="true" />
+                <element signature="e#1045#1046#0" expanded="true" />
+                <element signature="e#1087#1088#0" expanded="true" />
+                <element signature="e#1132#1133#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PersonForm.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cleanlungs/ui/PersonForm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="26" selection-start-column="26" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#216#217#0" expanded="true" />
+                <element signature="e#247#248#0" expanded="true" />
+                <element signature="e#302#303#0" expanded="true" />
+                <element signature="e#342#343#0" expanded="true" />
+                <element signature="e#433#434#0" expanded="true" />
+                <element signature="e#462#463#0" expanded="true" />
+                <element signature="e#506#507#0" expanded="true" />
+                <element signature="e#542#543#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PersonEditorController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cleanlungs/ui/PersonEditorController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#248#249#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.xhtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-22">
+              <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="person.xhtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/person.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="20" column="72" selection-start-line="20" selection-start-column="72" selection-end-line="20" selection-end-column="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchForm.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cleanlungs/ui/SearchForm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="template.xhtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/template.xhtml">
           <provider selected="true" editor-type-id="text-editor">
@@ -45,51 +158,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.xhtml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/target/cleanlungs-1.0-SNAPSHOT-exploded.war/index.xhtml">
+      <file leaf-file-name="import.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/import.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
+            <state>
+              <caret column="240" selection-start-column="240" selection-end-column="240" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="person.xhtml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/target/cleanlungs-1.0-SNAPSHOT-exploded.war/person.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/target/cleanlungs-1.0-SNAPSHOT-exploded.war/application.css">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="template.xhtml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/target/cleanlungs-1.0-SNAPSHOT-exploded.war/template.xhtml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="PersonController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PersonController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cleanlungs/ui/PersonController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+            <state relative-caret-position="176">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#916#917#0" expanded="true" />
+                <element signature="e#958#959#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.xhtml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="24" selection-end-line="63" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -117,21 +204,22 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/com/cleanlungs/Peron.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cleanlungs/ui/PersonContoller.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/cleanlungs/ui/EmployeeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cleanlungs/Employee.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cleanlungs/Person.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/aplication.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/cleanlungs/ui/SearchForm.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cleanlungs/ui/PersonForm.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/person.xhtml" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/import.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cleanlungs/PersonEJB.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cleanlungs/ui/PersonController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/template.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.xhtml" />
         <option value="$PROJECT_DIR$/target/cleanlungs-1.0-SNAPSHOT-exploded.war/index.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cleanlungs/ui/PersonForm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cleanlungs/PersonEJB.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cleanlungs/ui/PersonEditorController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cleanlungs/ui/PersonController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/person.xhtml" />
       </list>
     </option>
   </component>
@@ -228,18 +316,22 @@
               <item name="cleanlungs" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cleanlungs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cleanlungs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cleanlungs" type="b2602c69:ProjectViewProjectNode" />
               <item name="cleanlungs" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cleanlungs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cleanlungs" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="cleanlungs-1.0-SNAPSHOT-exploded.war" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -258,7 +350,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.SCSS" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -398,7 +490,7 @@
       <updated>1530615382074</updated>
       <workItem from="1530615385192" duration="16516000" />
       <workItem from="1530696830103" duration="16702000" />
-      <workItem from="1530802845714" duration="2191000" />
+      <workItem from="1530802845714" duration="9156000" />
     </task>
     <task id="LOCAL-00001" summary="basic commit">
       <created>1530620722902</created>
@@ -442,15 +534,21 @@
       <option name="project" value="LOCAL" />
       <updated>1530724595340</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Cleaned xhtml files, added template">
+      <created>1530805461559</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1530805461559</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35409000" />
+    <option name="totallyTimeSpent" value="42374000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="69" y="25" width="1851" height="1055" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="8" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
@@ -473,10 +571,10 @@
       <window_info anchor="bottom" id="Java Enterprise" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="bottom" id="Version Control" order="5" weight="0.32998884" />
-      <window_info anchor="bottom" id="Run" order="9" visible="true" weight="0.22408026" />
+      <window_info active="true" anchor="bottom" id="Run" order="9" visible="true" weight="0.22408026" />
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info id="Persistence" order="0" sideWeight="0.47181964" side_tool="true" weight="0.25263157" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.52818036" visible="true" weight="0.16232687" />
+      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.52818036" visible="true" weight="0.16232687" />
       <window_info anchor="right" id="Bean Validation" order="7" weight="0.32963988" />
       <window_info id="Web" order="5" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="6" />
@@ -503,7 +601,8 @@
     <MESSAGE value="Index page edited" />
     <MESSAGE value="Index page rebuild, private user page added, Date sorting bug fixed" />
     <MESSAGE value="Merge branch 'master' of github.com:weird-Distortion/cleanlungs&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/cleanlungs/ui/PersonController.java&#10;#&#9;src/main/webapp/index.xhtml&#10;#&#9;target/cleanlungs-1.0-SNAPSHOT-exploded.war/index.xhtml&#10;#&#9;target/cleanlungs-1.0-SNAPSHOT.war" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of github.com:weird-Distortion/cleanlungs&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/com/cleanlungs/ui/PersonController.java&#10;#&#9;src/main/webapp/index.xhtml&#10;#&#9;target/cleanlungs-1.0-SNAPSHOT-exploded.war/index.xhtml&#10;#&#9;target/cleanlungs-1.0-SNAPSHOT.war" />
+    <MESSAGE value="Cleaned xhtml files, added template" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned xhtml files, added template" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cleanlungs/Person.java">
@@ -522,6 +621,12 @@
           <caret line="25" column="2" lean-forward="true" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#894#895#0" expanded="true" />
+            <element signature="e#953#954#0" expanded="true" />
+            <element signature="e#995#996#0" expanded="true" />
+            <element signature="e#1045#1046#0" expanded="true" />
+            <element signature="e#1087#1088#0" expanded="true" />
+            <element signature="e#1132#1133#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -554,6 +659,8 @@
           <caret line="24" selection-start-line="24" selection-end-line="24" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#916#917#0" expanded="true" />
+            <element signature="e#958#959#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -588,6 +695,10 @@
             <element signature="e#247#248#0" expanded="true" />
             <element signature="e#302#303#0" expanded="true" />
             <element signature="e#342#343#0" expanded="true" />
+            <element signature="e#433#434#0" expanded="true" />
+            <element signature="e#462#463#0" expanded="true" />
+            <element signature="e#506#507#0" expanded="true" />
+            <element signature="e#542#543#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -678,23 +789,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/import.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="240" selection-start-column="240" selection-end-column="240" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jboss-web.xml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor" />
@@ -703,57 +799,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/person.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cleanlungs/ui/SearchForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cleanlungs/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cleanlungs/PersonEJB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cleanlungs/ui/PersonForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#216#217#0" expanded="true" />
-            <element signature="e#247#248#0" expanded="true" />
-            <element signature="e#302#303#0" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -770,20 +815,6 @@
     <entry file="file://$PROJECT_DIR$/target/cleanlungs-1.0-SNAPSHOT-exploded.war/template.xhtml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/template.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="24" selection-end-line="63" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/target/cleanlungs-1.0-SNAPSHOT-exploded.war/index.xhtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="356">
@@ -791,10 +822,113 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/import.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="240" selection-start-column="240" selection-end-column="240" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/template.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cleanlungs/ui/PersonController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+        <state relative-caret-position="176">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#916#917#0" expanded="true" />
+            <element signature="e#958#959#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cleanlungs/ui/SearchForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cleanlungs/PersonEJB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#894#895#0" expanded="true" />
+            <element signature="e#953#954#0" expanded="true" />
+            <element signature="e#995#996#0" expanded="true" />
+            <element signature="e#1045#1046#0" expanded="true" />
+            <element signature="e#1087#1088#0" expanded="true" />
+            <element signature="e#1132#1133#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cleanlungs/ui/PersonForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="26" selection-start-column="26" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#216#217#0" expanded="true" />
+            <element signature="e#247#248#0" expanded="true" />
+            <element signature="e#302#303#0" expanded="true" />
+            <element signature="e#342#343#0" expanded="true" />
+            <element signature="e#433#434#0" expanded="true" />
+            <element signature="e#462#463#0" expanded="true" />
+            <element signature="e#506#507#0" expanded="true" />
+            <element signature="e#542#543#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cleanlungs/ui/PersonEditorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#248#249#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-22">
+          <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/person.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="72" selection-start-line="20" selection-start-column="72" selection-end-line="20" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cleanlungs/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
