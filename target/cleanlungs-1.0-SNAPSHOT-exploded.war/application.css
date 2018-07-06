@@ -1,8 +1,0 @@
-.person-table {
-    border-collapse: collapse;
-}
-
-.person-table td, .person-table th {
-    padding: 4px;
-    border: 1px solid #CCC;
-}

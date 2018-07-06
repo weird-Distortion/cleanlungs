@@ -9,8 +9,8 @@ public class Person implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "person_id")
-    private Integer personId;
+    @Column(name = "person_no")
+    private Integer personNo;
 
     @Column(name = "first_name", length = 50)
     private String firstName;
@@ -37,12 +37,12 @@ public class Person implements Serializable {
     @Temporal(TemporalType.DATE)
     private Date registrationDate;
 
-    public Integer getPersonId() {
-        return personId;
+    public Integer getPersonNo() {
+        return personNo;
     }
 
-    public void setPersonId(final Integer personId) {
-        this.personId = personId;
+    public void setPersonNo(final Integer personNo) {
+        this.personNo = personNo;
     }
 
     public String getFirstName() {

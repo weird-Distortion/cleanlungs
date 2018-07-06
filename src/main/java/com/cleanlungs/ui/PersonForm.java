@@ -1,13 +1,14 @@
 package com.cleanlungs.ui;
 
 import com.cleanlungs.Person;
+import org.omnifaces.cdi.ViewScoped;
 
-import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
+import java.io.Serializable;
 
-@RequestScoped
+@ViewScoped
 @Named
-public class PersonForm {
+public class PersonForm implements Serializable {
 
     private Integer personId;
     private Person person;

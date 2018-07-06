@@ -12,9 +12,11 @@ import javax.inject.Named;
 public class PersonEditorController {
 
     @Inject
+    private
     PersonForm personForm;
 
     @Inject
+    private
     PersonEJB personEJB;
 
     public void save() {

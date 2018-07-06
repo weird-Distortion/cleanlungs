@@ -11,6 +11,7 @@ import java.util.List;
 public class PersonEJB {
 
     @PersistenceContext
+    private
     EntityManager entityManager;
 
     public List<Person> queryRegisteredAfter(Date registeredAfter) {
@@ -39,7 +40,7 @@ public class PersonEJB {
     }
 
     public void remove(Person person) {
-        Person attached = find(person.getPersonId());
+        Person attached = find(person.getPersonNo());
         entityManager.remove(attached);
     }
 }
