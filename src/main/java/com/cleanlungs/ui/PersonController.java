@@ -5,6 +5,8 @@ import com.cleanlungs.PersonEJB;
 
 import javax.enterprise.context.RequestScoped;
 import javax.enterprise.inject.Produces;
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.util.List;
@@ -35,5 +37,6 @@ public class PersonController {
 
     public void remove(Person person) {
         personEJB.remove(person);
+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Person *" + person.getPersonNo() + "* successfully deleted"));
     }
 }

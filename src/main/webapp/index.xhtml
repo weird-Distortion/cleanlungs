@@ -1,70 +1,80 @@
-<ui:composition xmlns="http://www.w3.org/1999/xhtml"
-                xmlns:f="http://java.sun.com/jsf/core"
-                xmlns:ui="http://java.sun.com/jsf/facelets"
-                xmlns:h="http://java.sun.com/jsf/html"
-                template="template.xhtml">
-  <ui:param name="pageTitle" value="Persons"/>
+<ui:composition
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:ui="http://java.sun.com/jsf/facelets"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:p="http://primefaces.org/ui"
+        template="template.xhtml">
+  <ui:param name="pageTitle" value="Cleanlungs"/>
   <ui:define name="content">
-    <p>Persons</p>
+    <p:growl id="growl" globalOnly="true"/>
     <h:form>
-      <h:panelGrid columns="9">
-        <h:outputLabel for="registeredAfter" value="Registred After:"/>
-        <h:inputText id="registeredAfter" value="#{searchForm.registeredAfter}"
-                     converterMessage="Please enter a valid date. For example 15/4/2015.">
+      <h:panelGrid columns="3">
+        <p:outputLabel for="registeredAfter" value="Registered After:"/>
+        <p:calendar id="registeredAfter" value="#{searchForm.registeredAfter}"
+                    pattern="dd/MM/yyyy" navigator="true"
+                    converterMessage="Please enter a valid date. For example 15/4/2015.">
           <f:convertDateTime pattern="dd/MM/yyyy"/>
-        </h:inputText>
-        <h:message for="registeredAfter"/>
-        <h:commandButton value="Submit"/>
-        <h:link value="New ..." outcome="person"/>
+          <p:ajax event="dateSelect" update=":frmPersons @form"/>
+        </p:calendar>
+        <p:message for="registeredAfter"/>
+        <p:button value="New ..." outcome="person"/>
       </h:panelGrid>
     </h:form>
-
     <h:form id="frmPersons">
-      <h:dataTable value="#{personController.persons}" var="per" styleClass="person-table">
-        <h:column>
+      <p:dataTable value="#{persons}" var="per" styleClass="person-table"
+                   rows="10" paginator="true">
+        <p:column sortBy="#{per.personNo}">
           <f:facet name="header">Person No</f:facet>
           <h:link value="#{per.personNo}" outcome="person">
             <f:param name="perid" value="#{per.personNo}"/>
           </h:link>
-        </h:column>
-        <h:column>
-          <f:facet name="header">First name</f:facet>
+        </p:column>
+        <p:column sortBy="#{per.firstName}">
+          <f:facet name="header">First Name</f:facet>
           #{per.firstName}
-        </h:column>
-        <h:column>
-          <f:facet name="header">Last name</f:facet>
+        </p:column>
+        <p:column sortBy="#{per.lastName}">
+          <f:facet name="header">Last Name</f:facet>
           #{per.lastName}
-        </h:column>
-        <h:column>
+        </p:column>
+        <p:column sortBy="#{per.street}">
           <f:facet name="header">Street</f:facet>
-          #{per.street}
-        </h:column>
-        <h:column>
-          <f:facet name="header">Building number</f:facet>
-          #{per.buildingNumber}
-        </h:column>
-        <h:column>
+          <h:outputText value="#{per.street}">
+          </h:outputText>
+        </p:column>
+        <p:column sortBy="#{per.buildingNumber}">
+          <f:facet name="header">Building Number</f:facet>
+          <h:outputText value="#{per.buildingNumber}">
+          </h:outputText>
+        </p:column>
+        <p:column sortBy="#{per.email}">
           <f:facet name="header">Email</f:facet>
-          #{per.email}
-        </h:column>
-        <h:column>
+          <h:outputText value="#{per.email}">
+          </h:outputText>
+        </p:column>
+        <p:column sortBy="#{per.phoneNumber}">
           <f:facet name="header">Phone</f:facet>
-          #{per.phoneNumber}
-        </h:column>
-        <h:column>
+          <h:outputText value="#{per.phoneNumber}">
+          </h:outputText>
+        </p:column>
+        <p:column sortBy="#{per.pesel}">
           <f:facet name="header">Pesel</f:facet>
-          #{per.pesel}
-        </h:column>
-        <h:column>
+          <h:outputText value="#{per.pesel}">
+          </h:outputText>
+        </p:column>
+        <p:column sortBy="#{per.registrationDate}">
           <f:facet name="header">Registered</f:facet>
           <h:outputText value="#{per.registrationDate}">
             <f:convertDateTime pattern="dd/MM/yyyy"/>
           </h:outputText>
-        </h:column>
-        <h:column>
-          <h:commandLink action="#{personController.remove(per)}" value="Delete"/>
-        </h:column>
-      </h:dataTable>
+        </p:column>
+        <p:column width="80" style="text-align: center">
+          <p:commandButton action="#{personController.remove(per)}" icon="ui-icon-trash"
+                           update="@form growl"
+                           style="width: 24px; height: 24px"/>
+        </p:column>
+      </p:dataTable>
     </h:form>
   </ui:define>
 </ui:composition>
