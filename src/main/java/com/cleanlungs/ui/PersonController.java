@@ -4,15 +4,13 @@ import com.cleanlungs.Person;
 import com.cleanlungs.PersonEJB;
 
 import javax.enterprise.context.RequestScoped;
-import javax.enterprise.inject.Produces;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
-import java.util.List;
 
 /**
- * Controller for the Person UI page.
+ * Controller for the Persons UI page.
  */
 
 @RequestScoped
@@ -20,23 +18,15 @@ import java.util.List;
 public class PersonController {
 
     @Inject
-    private SearchForm searchForm;
-
-    @Inject
     private PersonEJB personEJB;
 
-    @Produces
-    @Named
-    public List<Person> getPersons() {
-        if (searchForm.getRegisteredAfter() == null) {
-            return personEJB.queryAll();
-        } else {
-            return personEJB.queryRegisteredAfter(searchForm.getRegisteredAfter());
-        }
-    }
+    @Inject
+    private PersonDatatable personDatatable;
 
     public void remove(Person person) {
         personEJB.remove(person);
-        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Person *" + person.getPersonNo() + "* successfully deleted"));
+        personDatatable.refresh();
+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(person.getFirstName()
+                + " " + person.getLastName() + " successfully deleted"));
     }
 }

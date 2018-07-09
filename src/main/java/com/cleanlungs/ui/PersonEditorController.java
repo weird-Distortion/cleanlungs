@@ -7,6 +7,10 @@ import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+/**
+ * Controller for the Person UI page.
+ */
+
 @RequestScoped
 @Named
 public class PersonEditorController {

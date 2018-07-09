@@ -15,14 +15,14 @@
                     pattern="dd/MM/yyyy" navigator="true"
                     converterMessage="Please enter a valid date. For example 15/4/2015.">
           <f:convertDateTime pattern="dd/MM/yyyy"/>
-          <p:ajax event="dateSelect" update=":frmPersons @form"/>
+          <p:ajax event="dateSelect" listener="#{personDatatable.refresh}" update=":frmPersons @form"/>
         </p:calendar>
         <p:message for="registeredAfter"/>
         <p:button value="New ..." outcome="person"/>
       </h:panelGrid>
     </h:form>
     <h:form id="frmPersons">
-      <p:dataTable value="#{persons}" var="per" styleClass="person-table"
+      <p:dataTable value="#{personDatatable.values}" var="per" styleClass="person-table"
                    rows="10" paginator="true">
         <p:column sortBy="#{per.personNo}">
           <f:facet name="header">Person No</f:facet>
