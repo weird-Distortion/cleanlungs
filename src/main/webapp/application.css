@@ -6,3 +6,10 @@
     padding: 4px;
     border: 1px solid #CCC;
 }
+
+.status {
+    background-color: darkgreen;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+}

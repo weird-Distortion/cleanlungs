@@ -8,19 +8,7 @@
   <ui:param name="pageTitle" value="Cleanlungs"/>
   <ui:define name="content">
     <p:growl id="growl" globalOnly="true"/>
-    <h:form>
-      <h:panelGrid columns="3">
-        <p:outputLabel for="registeredAfter" value="Registered After:"/>
-        <p:calendar id="registeredAfter" value="#{searchForm.registeredAfter}"
-                    pattern="dd/MM/yyyy" navigator="true"
-                    converterMessage="Please enter a valid date. For example 15/4/2015.">
-          <f:convertDateTime pattern="dd/MM/yyyy"/>
-          <p:ajax event="dateSelect" listener="#{personDatatable.refresh}" update=":frmPersons @form"/>
-        </p:calendar>
-        <p:message for="registeredAfter"/>
-        <p:button value="New ..." outcome="person"/>
-      </h:panelGrid>
-    </h:form>
+
     <h:form id="frmPersons">
       <p:dataTable value="#{personDatatable.values}" var="per" styleClass="person-table"
                    rows="10" paginator="true">
@@ -39,34 +27,13 @@
           #{per.lastName}
         </p:column>
         <p:column sortBy="#{per.street}">
-          <f:facet name="header">Street</f:facet>
-          <h:outputText value="#{per.street}">
+          <f:facet name="header">Address</f:facet>
+          <h:outputText value="#{per.street}, #{per.buildingNumber}">
           </h:outputText>
         </p:column>
-        <p:column sortBy="#{per.buildingNumber}">
-          <f:facet name="header">Building Number</f:facet>
-          <h:outputText value="#{per.buildingNumber}">
-          </h:outputText>
-        </p:column>
-        <p:column sortBy="#{per.email}">
-          <f:facet name="header">Email</f:facet>
-          <h:outputText value="#{per.email}">
-          </h:outputText>
-        </p:column>
-        <p:column sortBy="#{per.phoneNumber}">
-          <f:facet name="header">Phone</f:facet>
-          <h:outputText value="#{per.phoneNumber}">
-          </h:outputText>
-        </p:column>
-        <p:column sortBy="#{per.pesel}">
-          <f:facet name="header">Pesel</f:facet>
-          <h:outputText value="#{per.pesel}">
-          </h:outputText>
-        </p:column>
-        <p:column sortBy="#{per.registrationDate}">
-          <f:facet name="header">Registered</f:facet>
-          <h:outputText value="#{per.registrationDate}">
-            <f:convertDateTime pattern="dd/MM/yyyy"/>
+        <p:column>
+          <f:facet name="header">Status</f:facet>
+          <h:outputText value="STATUS" styleClass="status">
           </h:outputText>
         </p:column>
         <p:column width="80" style="text-align: center">

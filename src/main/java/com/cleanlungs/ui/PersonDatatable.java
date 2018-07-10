@@ -33,4 +33,15 @@ public class PersonDatatable implements Serializable {
             values = personEJB.queryRegisteredAfter(searchForm.getRegisteredAfter());
         }
     }
+
+    //TEST METHODS
+    private Person selectedPerson;
+
+    public Person getSelectedPerson() {
+        return selectedPerson;
+    }
+
+    public void setSelectedPerson(Person selectedPerson) {
+        this.selectedPerson = selectedPerson;
+    }
 }
