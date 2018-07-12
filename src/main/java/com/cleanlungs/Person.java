@@ -37,6 +37,9 @@ public class Person implements Serializable {
     @Temporal(TemporalType.DATE)
     private Date registrationDate;
 
+    @Column(name = "status")
+    private byte status;
+
     public Integer getPersonNo() {
         return personNo;
     }
@@ -108,4 +111,13 @@ public class Person implements Serializable {
     public void setRegistrationDate(final Date registrationDate) {
         this.registrationDate = registrationDate;
     }
+
+    public byte getStatus() {
+        return status;
+    }
+
+    public void setStatus(byte status) {
+        this.status = status;
+    }
+
 }

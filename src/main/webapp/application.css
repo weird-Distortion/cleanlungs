@@ -7,8 +7,21 @@
     border: 1px solid #CCC;
 }
 
-.status {
+.sg {
     background-color: darkgreen;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+}
+
+.sr {
+    background-color: red;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+}
+
+.status {
     font-weight: bold;
     text-align: center;
     display: block;
