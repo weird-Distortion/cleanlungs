@@ -9,16 +9,10 @@
 
 .sg {
     background-color: darkgreen;
-    font-weight: bold;
-    text-align: center;
-    display: block;
 }
 
 .sr {
     background-color: red;
-    font-weight: bold;
-    text-align: center;
-    display: block;
 }
 
 .status {
@@ -26,3 +20,4 @@
     text-align: center;
     display: block;
 }
+

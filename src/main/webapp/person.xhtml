@@ -3,6 +3,7 @@
         xmlns:f="http://java.sun.com/jsf/core"
         xmlns:ui="http://java.sun.com/jsf/facelets"
         xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:p="http://primefaces.org/ui"
         template="template.xhtml">
   <ui:param name="pageTitle" value="Person"/>
   <ui:define name="content">
@@ -12,47 +13,40 @@
     </f:metadata>
 
     <h:form id="frmPerson">
-      <h:panelGrid columns="3">
-        <h:outputLabel for="personId" value="User ID"/>
-        <h:inputText id="personId" value="#{personForm.person.personNo}" readonly="true"/>
-        <h:message for="personId"/>
+      <p:growl id="msgs" showDetail="true" />
 
-        <h:outputLabel for="firstName" value="First Name"/>
-        <h:inputText id="firstName" value="#{personForm.person.firstName}"/>
-        <h:message for="firstName"/>
+      <h:panelGrid columns="2" cellpadding="5">
+        <p:outputLabel for="personID" value="User ID" />
+        <p:inputText id="personID" value="#{personForm.person.personNo}" readonly="true"/>
 
-        <h:outputLabel for="lastName" value="Last Name"/>
-        <h:inputText id="lastName" value="#{personForm.person.lastName}"/>
-        <h:message for="lastName"/>
+        <p:outputLabel for="firstName" value="First name" />
+        <p:inputText id="firstName" value="#{personForm.person.firstName}"/>
 
-        <h:outputLabel for="street" value="Street"/>
-        <h:inputText id="street" value="#{personForm.person.street}"/>
-        <h:message for="street"/>
+        <p:outputLabel for="lastName" value="Last name" />
+        <p:inputText id="lastName" value="#{personForm.person.lastName}"/>
 
-        <h:outputLabel for="buildingNumber" value="Building number"/>
-        <h:inputText id="buildingNumber" value="#{personForm.person.buildingNumber}"/>
-        <h:message for="buildingNumber"/>
+        <p:outputLabel for="street" value="Street" />
+        <p:inputText id="street" value="#{personForm.person.street}"/>
 
-        <h:outputLabel for="email" value="Email"/>
-        <h:inputText id="email" value="#{personForm.person.email}"/>
-        <h:message for="email"/>
+        <p:outputLabel for="buildingNumber" value="Building number" />
+        <p:inputText id="buildingNumber" value="#{personForm.person.buildingNumber}"/>
 
-        <h:outputLabel for="phoneNumber" value="Phone"/>
-        <h:inputText id="phoneNumber" value="#{personForm.person.phoneNumber}"/>
-        <h:message for="phoneNumber"/>
+        <p:outputLabel for="email" value="Email" />
+        <p:inputText id="email" value="#{personForm.person.email}"/>
 
-        <h:outputLabel for="pesel" value="Pesel"/>
-        <h:inputText id="pesel" value="#{personForm.person.pesel}"/>
-        <h:message for="pesel"/>
+        <p:outputLabel for="phoneNumber" value="Phone" />
+        <p:inputText id="phoneNumber" value="#{personForm.person.phoneNumber}"/>
 
-        <h:outputLabel for="registeredDate" value="Registered"/>
-        <h:inputText id="registeredDate" value="#{personForm.person.registrationDate}">
+        <p:outputLabel for="pesel" value="Pesel" />
+        <p:inputText id="pesel" value="#{personForm.person.pesel}"/>
+
+        <p:outputLabel for="registrationDate" value="Registered" />
+        <p:inputText id="registrationDate" value="#{personForm.person.registrationDate}" readonly="true">
           <f:convertDateTime pattern="dd/MM/yyyy"/>
-        </h:inputText>
-        <h:message for="registeredDate"/>
+        </p:inputText>
 
-        <h:commandButton action="#{personEditorController.save}" value="Save"/>
-        <h:link outcome="index" value="Cancel"/>
+        <p:button outcome="index" value="Cancel"/>
+        <p:commandButton action="#{personEditorController.save}" value="Save"/>
       </h:panelGrid>
     </h:form>
   </ui:define>
