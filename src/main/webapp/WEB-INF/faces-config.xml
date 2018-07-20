@@ -19,4 +19,20 @@
         </navigation-case>
     </navigation-rule>
 
+    <!-- New Person Page -->
+    <navigation-rule>
+        <from-view-id>/newUser.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{personEditorController.save}</from-action>
+            <if>#{not facesContext.isValidationFailed()}</if>
+            <to-view-id>/index.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>cancel</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+
 </faces-config>

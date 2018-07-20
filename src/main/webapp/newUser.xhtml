@@ -5,43 +5,45 @@
         xmlns:h="http://java.sun.com/jsf/html"
         xmlns:p="http://primefaces.org/ui"
         template="template.xhtml">
-  <ui:param name="pageTitle" value="Person"/>
+  <ui:param name="pageTitle" value="New person"/>
   <ui:define name="content">
     <f:metadata>
       <f:viewParam name="perid" value="#{personForm.personId}"/>
       <f:event type="preRenderView" listener="#{personEditorController.preRenderViewEvent}"/>
     </f:metadata>
 
+    <p:outputLabel value="Fill user inforamtion:"/>
+
     <h:form id="frmPerson">
-      <p:growl id="msgs" showDetail="true" />
+      <p:growl id="msgs" showDetail="true"/>
 
       <h:panelGrid columns="2" cellpadding="5">
-        <p:outputLabel for="personID" value="User ID" />
+        <p:outputLabel for="personID" value="User ID"/>
         <p:inputText id="personID" value="#{personForm.person.personNo}" readonly="true"/>
 
-        <p:outputLabel for="firstName" value="First name" />
+        <p:outputLabel for="firstName" value="First name"/>
         <p:inputText id="firstName" value="#{personForm.person.firstName}"/>
 
-        <p:outputLabel for="lastName" value="Last name" />
+        <p:outputLabel for="lastName" value="Last name"/>
         <p:inputText id="lastName" value="#{personForm.person.lastName}"/>
 
-        <p:outputLabel for="street" value="Street" />
+        <p:outputLabel for="street" value="Street"/>
         <p:inputText id="street" value="#{personForm.person.street}"/>
 
-        <p:outputLabel for="buildingNumber" value="Building number" />
+        <p:outputLabel for="buildingNumber" value="Building number"/>
         <p:inputText id="buildingNumber" value="#{personForm.person.buildingNumber}"/>
 
-        <p:outputLabel for="email" value="Email" />
+        <p:outputLabel for="email" value="Email"/>
         <p:inputText id="email" value="#{personForm.person.email}"/>
 
-        <p:outputLabel for="phoneNumber" value="Phone" />
+        <p:outputLabel for="phoneNumber" value="Phone"/>
         <p:inputText id="phoneNumber" value="#{personForm.person.phoneNumber}"/>
 
-        <p:outputLabel for="pesel" value="Pesel" />
-        <p:inputText id="pesel" value="#{personForm.person.pesel}" readonly="true"/>
+        <p:outputLabel for="pesel" value="Pesel"/>
+        <p:inputText id="pesel" value="#{personForm.person.pesel}"/>
 
-        <p:outputLabel for="registrationDate" value="Registered" />
-        <p:inputText id="registrationDate" value="#{personForm.person.registrationDate}" readonly="true">
+        <p:outputLabel for="registrationDate" value="Registered"/>
+        <p:inputText id="registrationDate" value="#{personForm.person.registrationDate}">
           <f:convertDateTime pattern="dd/MM/yyyy"/>
         </p:inputText>
 
