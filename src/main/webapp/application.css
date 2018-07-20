@@ -7,17 +7,10 @@
     border: 1px solid #CCC;
 }
 
-.sg {
-    background-color: darkgreen;
-}
-
-.sr {
-    background-color: red;
-}
-
 .status {
     font-weight: bold;
     text-align: center;
     display: block;
+    border-style: dotted;
 }
 

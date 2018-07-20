@@ -37,8 +37,13 @@ public class Person implements Serializable {
     @Temporal(TemporalType.DATE)
     private Date registrationDate;
 
+    /**
+     * Default detector value is off (-1)
+     * Detector is on (0)
+     * Detector is on and detecting air high toxin (1)
+     */
     @Column(name = "status")
-    private byte status;
+    private byte status = -1;
 
     public Integer getPersonNo() {
         return personNo;

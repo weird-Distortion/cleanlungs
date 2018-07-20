@@ -33,7 +33,7 @@
         </p:column>
         <p:column>
           <f:facet name="header">Status</f:facet>
-          <h:outputText value="* STATUS *" style="background-color: #{per.status != 0 ? 'red' : 'green'}" styleClass="status"/>
+          <h:outputText value="* STATUS *" style="background-color: #{per.status == 0 ? 'green' : per.status == -1 ? 'grey' : 'red'}" styleClass="status"/>
         </p:column>
         <p:column width="80" style="text-align: center">
           <p:commandButton action="#{personController.remove(per)}" icon="ui-icon-trash"
