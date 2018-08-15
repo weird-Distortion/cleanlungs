@@ -8,7 +8,7 @@
   <ui:param name="pageTitle" value="Cleanlungs"/>
   <ui:define name="content">
     <p:growl id="growl" globalOnly="true"/>
-    <p:button outcome="newUser" value="New..." />
+    <p:button outcome="newUser" value="New..."/>
     <h:form id="frmPersons">
       <p:dataTable value="#{personDatatable.values}" var="per" styleClass="person-table"
                    rows="10" paginator="true">
@@ -33,7 +33,8 @@
         </p:column>
         <p:column>
           <f:facet name="header">Status</f:facet>
-          <h:outputText value="* STATUS *" style="background-color: #{per.status == 0 ? 'green' : per.status == -1 ? 'grey' : 'red'}" styleClass="status"/>
+          <h:outputText value="#{per.status}"
+                        styleClass="status"/>
         </p:column>
         <p:column width="80" style="text-align: center">
           <p:commandButton action="#{personController.remove(per)}" icon="ui-icon-trash"
@@ -42,5 +43,7 @@
         </p:column>
       </p:dataTable>
     </h:form>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+    <script type="text/javascript" src="${pageContext.request.contextPath}js/refresh.js"></script>
   </ui:define>
 </ui:composition>

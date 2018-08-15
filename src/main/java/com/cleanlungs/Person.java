@@ -43,7 +43,7 @@ public class Person implements Serializable {
      * Detector is on and detecting air high toxin (1)
      */
     @Column(name = "status")
-    private byte status = -1;
+    private String status = "NOT WORKING";
 
     public Integer getPersonNo() {
         return personNo;
@@ -117,11 +117,11 @@ public class Person implements Serializable {
         this.registrationDate = registrationDate;
     }
 
-    public byte getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(byte status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 
