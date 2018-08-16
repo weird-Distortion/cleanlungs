@@ -35,8 +35,6 @@
           <f:facet name="header">Status</f:facet>
           <h:outputText value="#{per.status}"
                         styleClass="status"/>
-          <!--value="* STATUS *"-->
-          <!--style="background-color: #{per.status == 0 ? 'green' : per.status == -1 ? 'grey' : 'red'}"-->
         </p:column>
         <p:column width="80" style="text-align: center">
           <p:commandButton action="#{personController.remove(per)}" icon="ui-icon-trash"
@@ -46,6 +44,6 @@
       </p:dataTable>
     </h:form>
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
-    <script type="text/javascript" src="${pageContext.request.contextPath}js/refresh.js"></script>
+    <!--<script type="text/javascript" src="${pageContext.request.contextPath}js/refresh.js"></script>-->
   </ui:define>
 </ui:composition>
