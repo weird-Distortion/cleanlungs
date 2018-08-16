@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="cleanlungs:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="cleanlungs-1.0-SNAPSHOT.war">
-      <element id="artifact" artifact-name="cleanlungs:war exploded" />
-    </root>
-  </artifact>
-</component>
