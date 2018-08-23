@@ -43,7 +43,7 @@
         </p:column>
       </p:dataTable>
     </h:form>
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
-    <!--<script type="text/javascript" src="${pageContext.request.contextPath}js/refresh.js"></script>-->
+    <p:commandButton value="Start simulation" id="start-btn" actionListener="#{simulator.buttonStartAction}" update="growl" />
+    <p:commandButton value="Stop simulation" id="stop-btn" actionListener="#{simulator.buttonStopAction}" update="growl" />
   </ui:define>
 </ui:composition>
