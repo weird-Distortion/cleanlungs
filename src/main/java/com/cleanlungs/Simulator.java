@@ -1,9 +1,12 @@
 package com.cleanlungs;
 
+import com.cleanlungs.ui.PersonDatatable;
+
 import javax.enterprise.context.SessionScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.faces.event.ActionEvent;
+import javax.inject.Inject;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -15,15 +18,8 @@ import java.util.*;
 @Named
 public class Simulator implements Serializable {
 
-    @PersistenceContext
-    private
-    EntityManager entityManager;
-
-    private List<Person> queryAll() {
-        TypedQuery<Person> query = entityManager
-                .createQuery("select e from Person e", Person.class);
-        return query.getResultList();
-    }
+    @Inject
+    private PersonDatatable personDatatable;
 
     private List<Person> personList;
     private Map<Person, Timer> personMap = new HashMap<>();
@@ -37,14 +33,14 @@ public class Simulator implements Serializable {
         FacesContext.getCurrentInstance().addMessage(null, message);
 
         /**
-         *TAKE LIST OF EXISTING USERS
+         *TAKE LIST OF EXISTING USERS - OK
          * Every user has to has his own timer.
          * Button New->Save - has to add new user to personList (if it's new user)
          * and every new user has to get his timer either.
          * Delete button has to delete user from person list.
          */
         if (personMap.isEmpty()) {
-            personList = queryAll();
+            personList = personDatatable.getValues();
             personList.forEach(x -> personMap.put(x, new Timer()));
         }
 
