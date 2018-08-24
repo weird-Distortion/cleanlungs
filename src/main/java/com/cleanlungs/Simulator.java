@@ -8,9 +8,6 @@ import javax.faces.context.FacesContext;
 import javax.faces.event.ActionEvent;
 import javax.inject.Inject;
 import javax.inject.Named;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.TypedQuery;
 import java.io.Serializable;
 import java.util.*;
 
@@ -70,6 +67,30 @@ public class Simulator implements Serializable {
             System.out.println(y.getClass().getName() + " is canceled!");
             y.cancel();
             y.purge();
+        });
+
+    }
+
+    public void buttonTestAction(ActionEvent actionEvent) {
+        switchStatus("Button works!");
+    }
+
+    private void switchStatus(String summary) {
+        FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, summary, null);
+        FacesContext.getCurrentInstance().addMessage(null, message);
+
+        if (personMap.isEmpty()) {
+            System.out.println("PersonMap is EMPTY!!!");
+            return;
+        }
+
+        personMap.forEach((x, y) -> {
+            System.out.println("SwitchStatus worked");
+            if (x.getStatus().equals("OK")) {
+                x.setStatus("DETECTED");
+            } else if (x.getStatus().equals("DETECTED")) {
+                x.setStatus("OK");
+            }
         });
 
     }
