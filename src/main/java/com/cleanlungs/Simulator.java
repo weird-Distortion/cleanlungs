@@ -1,29 +1,24 @@
 package com.cleanlungs;
 
+import com.cleanlungs.ui.PersonDatatable;
+
 import javax.enterprise.context.SessionScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.faces.event.ActionEvent;
+import javax.inject.Inject;
 import javax.inject.Named;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.TypedQuery;
 import java.io.Serializable;
 import java.util.*;
+
+import static java.util.stream.Collectors.toMap;
 
 @SessionScoped
 @Named
 public class Simulator implements Serializable {
 
-    @PersistenceContext
-    private
-    EntityManager entityManager;
-
-    private List<Person> queryAll() {
-        TypedQuery<Person> query = entityManager
-                .createQuery("select e from Person e", Person.class);
-        return query.getResultList();
-    }
+    @Inject
+    private PersonDatatable personDatatable;
 
     private List<Person> personList;
     private Map<Person, Timer> personMap = new HashMap<>();
@@ -37,24 +32,26 @@ public class Simulator implements Serializable {
         FacesContext.getCurrentInstance().addMessage(null, message);
 
         /**
-         *TAKE LIST OF EXISTING USERS
+         *TAKE LIST OF EXISTING USERS - OK
          * Every user has to has his own timer.
          * Button New->Save - has to add new user to personList (if it's new user)
          * and every new user has to get his timer either.
          * Delete button has to delete user from person list.
          */
         if (personMap.isEmpty()) {
-            personList = queryAll();
-            personList.forEach(x -> personMap.put(x, new Timer()));
+            personList = personDatatable.getValues();
+            personList.forEach(person -> personMap.put(person, new Timer()));
         }
 
-        personList.forEach(x -> personMap.put(x, new Timer()));
-        personMap.forEach((x, y) -> y.schedule(new TimerTask() {
+//        personMap = personList.parallelStream().collect(toMap(i -> i,i -> i));
+        personList.forEach(person -> personMap.put(person, new Timer()));
+        personMap.forEach((person, timer) -> timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                System.out.println("simulator " + Thread.currentThread().getName() + " works!");
+//                System.out.println("simulator " + Thread.currentThread().getName() + " works!");
+                switchStatus(person);
             }
-        }, 1000 * 5, 1000 * 5));
+        }, 1000 * 10, 1000 * 5 * (new Random().nextInt(10) + 1)));
     }
 
     public void buttonStopAction(ActionEvent actionEvent) {
@@ -76,5 +73,15 @@ public class Simulator implements Serializable {
             y.purge();
         });
 
+    }
+
+    private void switchStatus(Person person) {
+        System.out.println("STATUS SWITCHED " + person.getFirstName() + " " + person.getLastName());
+
+        if (person.getStatus().equals("OK")) {
+            person.setStatus("DETECTED");
+        } else if (person.getStatus().equals("DETECTED")) {
+            person.setStatus("OK");
+        }
     }
 }
