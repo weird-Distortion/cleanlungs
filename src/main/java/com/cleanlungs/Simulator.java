@@ -11,6 +11,8 @@ import javax.inject.Named;
 import java.io.Serializable;
 import java.util.*;
 
+import static java.util.stream.Collectors.toMap;
+
 @SessionScoped
 @Named
 public class Simulator implements Serializable {
@@ -38,16 +40,18 @@ public class Simulator implements Serializable {
          */
         if (personMap.isEmpty()) {
             personList = personDatatable.getValues();
-            personList.forEach(x -> personMap.put(x, new Timer()));
+            personList.forEach(person -> personMap.put(person, new Timer()));
         }
 
-        personList.forEach(x -> personMap.put(x, new Timer()));
-        personMap.forEach((x, y) -> y.schedule(new TimerTask() {
+//        personMap = personList.parallelStream().collect(toMap(i -> i,i -> i));
+        personList.forEach(person -> personMap.put(person, new Timer()));
+        personMap.forEach((person, timer) -> timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                System.out.println("simulator " + Thread.currentThread().getName() + " works!");
+//                System.out.println("simulator " + Thread.currentThread().getName() + " works!");
+                switchStatus(person);
             }
-        }, 1000 * 5, 1000 * 5));
+        }, 1000 * 10, 1000 * 5 * (new Random().nextInt(10) + 1)));
     }
 
     public void buttonStopAction(ActionEvent actionEvent) {
@@ -71,27 +75,13 @@ public class Simulator implements Serializable {
 
     }
 
-    public void buttonTestAction(ActionEvent actionEvent) {
-        switchStatus("Button works!");
-    }
+    private void switchStatus(Person person) {
+        System.out.println("STATUS SWITCHED " + person.getFirstName() + " " + person.getLastName());
 
-    private void switchStatus(String summary) {
-        FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, summary, null);
-        FacesContext.getCurrentInstance().addMessage(null, message);
-
-        if (personMap.isEmpty()) {
-            System.out.println("PersonMap is EMPTY!!!");
-            return;
+        if (person.getStatus().equals("OK")) {
+            person.setStatus("DETECTED");
+        } else if (person.getStatus().equals("DETECTED")) {
+            person.setStatus("OK");
         }
-
-        personMap.forEach((x, y) -> {
-            System.out.println("SwitchStatus worked");
-            if (x.getStatus().equals("OK")) {
-                x.setStatus("DETECTED");
-            } else if (x.getStatus().equals("DETECTED")) {
-                x.setStatus("OK");
-            }
-        });
-
     }
 }
