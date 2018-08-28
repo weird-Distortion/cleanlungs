@@ -10,6 +10,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
 import java.util.*;
+import java.util.function.Function;
 
 import static java.util.stream.Collectors.toMap;
 
@@ -40,11 +41,10 @@ public class Simulator implements Serializable {
          */
         if (personMap.isEmpty()) {
             personList = personDatatable.getValues();
-            personList.forEach(person -> personMap.put(person, new Timer()));
+            personMap = personList.parallelStream().collect(toMap(person -> person, person -> new Timer()));
         }
 
-//        personMap = personList.parallelStream().collect(toMap(i -> i,i -> i));
-        personList.forEach(person -> personMap.put(person, new Timer()));
+        personMap = personList.parallelStream().collect(toMap(person -> person, person -> new Timer()));
         personMap.forEach((person, timer) -> timer.schedule(new TimerTask() {
             @Override
             public void run() {
@@ -72,7 +72,6 @@ public class Simulator implements Serializable {
             y.cancel();
             y.purge();
         });
-
     }
 
     private void switchStatus(Person person) {
