@@ -14,16 +14,10 @@ public class PersonEJB {
     private
     EntityManager entityManager;
 
-    public List<Person> queryRegisteredAfter(Date registeredAfter) {
-        TypedQuery<Person> query = entityManager
-                .createQuery("select e from Person e where e.registrationDate > :registeredAfter", Person.class);
-        query.setParameter("registeredAfter", registeredAfter);
-        return query.getResultList();
-    }
-
     public List<Person> queryAll() {
         TypedQuery<Person> query = entityManager
                 .createQuery("select e from Person e", Person.class);
+
         return query.getResultList();
     }
 
