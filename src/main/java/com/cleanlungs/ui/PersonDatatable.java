@@ -15,9 +15,6 @@ public class PersonDatatable implements Serializable {
     @Inject
     private PersonEJB personEJB;
 
-    @Inject
-    private SearchForm searchForm;
-
     private List<Person> values;
 
     public List<Person> getValues() {
@@ -27,10 +24,6 @@ public class PersonDatatable implements Serializable {
     }
 
     public void refresh() {
-        if (searchForm.getRegisteredAfter() == null) {
-            values = personEJB.queryAll();
-        } else {
-            values = personEJB.queryRegisteredAfter(searchForm.getRegisteredAfter());
-        }
+        values = personEJB.queryAll();
     }
 }

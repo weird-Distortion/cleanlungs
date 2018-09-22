@@ -10,7 +10,6 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
 import java.util.*;
-import java.util.function.Function;
 
 import static java.util.stream.Collectors.toMap;
 
@@ -30,6 +29,7 @@ public class Simulator implements Serializable {
 
     private void startSimulator(String summary) {
         FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, summary, null);
+
         FacesContext.getCurrentInstance().addMessage(null, message);
 
         /**
@@ -39,16 +39,16 @@ public class Simulator implements Serializable {
          * and every new user has to get his timer either.
          * Delete button has to delete user from person list.
          */
-        if (personMap.isEmpty()) {
-            personList = personDatatable.getValues();
-            personMap = personList.parallelStream().collect(toMap(person -> person, person -> new Timer()));
-        }
 
-        personMap = personList.parallelStream().collect(toMap(person -> person, person -> new Timer()));
+        personList = personDatatable.getValues();
+
+        personMap =
+                personList.parallelStream()
+                        .collect(toMap(person -> person, person -> new Timer()));
+
         personMap.forEach((person, timer) -> timer.schedule(new TimerTask() {
             @Override
             public void run() {
-//                System.out.println("simulator " + Thread.currentThread().getName() + " works!");
                 switchStatus(person);
             }
         }, 1000 * 10, 1000 * 5 * (new Random().nextInt(10) + 1)));
